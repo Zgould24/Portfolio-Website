@@ -1,0 +1,164 @@
+html {
+  overflow-y: hidden;
+}
+
+@media (orientation: landscape) {
+
+  #about-title {
+    background-color: rgba(128, 128, 128, 0.5);
+    transform: translate(-255px, 0px);
+
+    color: rgb(0, 0, 0);
+    height: 70px;
+    width: 555px;
+
+    font-family: "Courier New", Courier, monospace;
+    font-weight: lighter;
+    font-size: 60px;
+
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.75);
+    text-align: right;
+    padding-right: 10px;
+    text-indent: 20px;
+    line-height: 65px;
+
+    animation: fadeInLeft 0.7s;
+  }
+
+  #bio-back {
+    height: 75%;
+    width: 60vw;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    opacity: 0;
+    background-color: rgb(85, 85, 85);
+    border-radius: 0.5%;
+
+    transform: translate(-50%, -30%);
+
+    animation: fadeInBottomBox 1s forwards;
+  }
+
+  #bio-text {
+    background-color: white;
+    height: 95%;
+    width: 95%;
+
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+
+    overflow-y: scroll;
+  }
+
+  #bio-text p::first-letter {
+    font-size: 60px;
+  }
+
+  #bio-text p {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media (orientation: portrait) {
+
+  html {
+    overflow-x: hidden;
+  }
+
+  #about-title {
+    background-color: rgba(128, 128, 128, 0.5);
+    transform: translate(-255px, 0px);
+
+    color: rgb(0, 0, 0);
+    height: 70px;
+    width: 555px;
+
+    font-family: "Courier New", Courier, monospace;
+    font-weight: lighter;
+    font-size: 60px;
+
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.75);
+    text-align: right;
+    padding-right: 10px;
+    text-indent: 20px;
+    line-height: 65px;
+
+    animation: fadeInLeft 0.7s;
+  }
+
+  #bio-back {
+    height: 75%;
+    width: 80%;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    opacity: 0;
+    background-color: rgb(85, 85, 85);
+    border-radius: 0.5%;
+
+    transform: translate(-50%, -30%);
+
+    animation: fadeInBottomBox 1s forwards;
+  }
+
+  #bio-text {
+    background-color: white;
+    height: 95%;
+    width: 95%;
+
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+
+    overflow-y: scroll;
+  }
+
+  #bio-text p::first-letter {
+    font-size: 50px;
+  }
+
+  #bio-text p {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-50px, 0px);
+  }
+  10% {
+    opacity: 0;
+    transform: translate(-50px, 0px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInBottomBox {
+  0% {
+    transform: translate(-50%, 0%);
+  }
+  20% {
+    opacity: 0;
+    transform: translate(-50%, -25%);
+  }
+  100% {
+    opacity: 1;
+  }
+}

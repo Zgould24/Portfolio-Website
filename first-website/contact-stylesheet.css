@@ -1,0 +1,307 @@
+@media (orientation: landscape) {
+    #contact-title {
+        background-color:rgba(128, 128, 128, .5);
+        transform: translate(-235px, 0px);
+
+        color:rgb(0, 0, 0);
+        height: 70px;
+        width:500px;
+
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: lighter;
+        font-size: 60px;
+
+        text-shadow: 0.5px 0.5px rgba(255, 255, 255, 0.75);
+        text-align:right;
+        padding-right: 10px;
+        text-indent: 20px;
+        line-height: 65px;
+
+        animation: fadeInLeft 0.7s;
+    }
+
+    #contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.25rem;
+    }
+
+    #contact-info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5%;
+
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+
+        color: rgb(0, 0, 0);
+    }
+
+    .contact-form {
+        left: 40%;
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        margin-top: 50px;
+        opacity: 0;
+        transition: all 1s;
+    }
+
+    #contact-form h1 {
+        display: flex;
+        align-self: center;
+        font-size: 2.25rem;
+    }
+
+    #contact-form label {
+        margin-left: 10%
+    }
+
+    #title {
+        font-size: 50;
+        font-weight:lighter;
+        
+        animation: fadeInBottom 1s;
+    }
+
+    #business {
+        font-size: 27px;
+
+        animation: fadeInBottom 1.5s;
+    }
+
+    #personal {
+        font-size: 27px;
+        position: relative;
+        margin-bottom: 100px;
+
+        animation: fadeInBottom 2s;
+    }
+
+    #reference {
+        display: flex;
+        align-self: center;
+        overflow: hidden;
+        white-space: nowrap;
+
+        border-right: 1px solid rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: lighter;
+
+        width: 64ch;
+
+        animation: typing 3s steps(64) forwards, typing-line 0.5s 9;
+        animation-delay: 2s;
+    }
+
+    #description {
+        display: flex;
+        height: 6rem;
+    }
+
+    #submit {
+        display: flex;
+        width: 20%;
+        align-self: flex-start;
+        justify-content: center;
+        margin-left: 10%;
+        background-color:rgba(128, 128, 128, .5);
+        border: none;
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        transition: 0.3s ease-in-out;
+    }
+
+    #submit:hover {
+        background-color:rgba(80, 80, 80, 0.5);
+        transform: scale(1.05);
+        transition: 0.3s ease-in-out;
+    }
+
+    #submit:focus:active {
+        background-color:rgba(80, 80, 80, 0.733);
+        transform: scale(1);
+        transition: 0.1s ease;
+    }
+
+    .input {
+        display: flex;
+        align-self: center;
+        width: 80%;
+        height: 2rem;
+        border-radius: 5px;
+    }
+
+    .fade-in-scroll {
+        transform: translateY(-2rem);
+        opacity: 1;
+        transition: 1s ease-in-out;
+    }
+}
+
+@media (orientation: portrait) {
+    #contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Courier New', Courier, monospace;
+        padding-left: 1rem;
+        white-space: nowrap;
+    }
+
+    #contact-title {
+        background-color:rgba(128, 128, 128, .5);
+        transform: translate(-235px, 0px);
+    
+        color:rgb(0, 0, 0);
+        height: 70px;
+        width:500px;
+    
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: lighter;
+        font-size: 60px;
+    
+        text-shadow: 0.5px 0.5px rgba(255, 255, 255, 0.75);
+        text-align:right;
+        padding-right: 10px;
+        text-indent: 20px;
+        line-height: 65px;
+    
+        animation: fadeInLeft 0.7s;
+    }
+    
+    #contact-info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5%;
+    
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+    
+        color: rgb(0, 0, 0);
+    }
+    
+    .contact-form {
+        left: 40%;
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        margin-top: 50px;
+        opacity: 0;
+        transition: all 1s;
+    }
+    
+    #contact-form h1 {
+        display: flex;
+        align-self: center;
+        font-size: 2.25rem;
+    }
+    
+    #contact-form label {
+        margin-left: 10%
+    }
+    
+    #title {
+        font-size: 1.15em;
+        font-weight:lighter;
+        
+        animation: fadeInBottom 1s;
+    }
+    
+    #business {
+        font-size: 1.25em;
+    
+        animation: fadeInBottom 1.5s;
+    }
+    
+    #personal {
+        font-size: 1.25em;
+        position: relative;
+        margin-bottom: 100px;
+    
+        animation: fadeInBottom 2s;
+    }
+    
+    #reference {
+        display: flex;
+        align-self: center;
+        overflow: hidden;
+        white-space: nowrap;
+    
+        border-right: 1px solid rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: lighter;
+        font-size: .5em;
+    
+        width: 64ch;
+    
+        animation: typing 3s steps(64) forwards, typing-line 0.5s 9;
+        animation-delay: 2s;
+    }
+    
+    #description {
+        display: flex;
+        height: 6rem;
+    }
+    
+    #submit {
+        display: flex;
+        width: 20%;
+        align-self: flex-start;
+        justify-content: center;
+        margin-left: 10%;
+        background-color:rgba(128, 128, 128, .5);
+        border: none;
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        transition: 0.3s ease-in-out;
+    }
+    
+    #submit:hover {
+        background-color:rgba(80, 80, 80, 0.5);
+        transform: scale(1.05);
+        transition: 0.3s ease-in-out;
+    }
+    
+    #submit:focus:active {
+        background-color:rgba(80, 80, 80, 0.733);
+        transform: scale(1);
+        transition: 0.1s ease;
+    }
+    
+    .input {
+        display: flex;
+        align-self: center;
+        width: 80%;
+        height: 2rem;
+        border-radius: 5px;
+    }
+    
+    .fade-in-scroll {
+        transform: translateY(-2rem);
+        opacity: 1;
+        transition: 1s ease-in-out;
+    }
+}
+
+@keyframes fadeInBottom {
+    0% {opacity: 0; transform: translate(0px, 100px)}
+    20% {opacity: 0}
+}
+
+@keyframes typing {
+    0% {width:0; color: black;}
+    to{color: black;}
+}
+
+@keyframes typing-line {
+    0%{border-right-color: black;}
+    30%{border-right-color: black;}
+    100%{border-right-color:rgba(0, 0, 0, 0)}
+}

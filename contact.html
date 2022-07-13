@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="master.css" rel="stylesheet">
+    <link href="contact.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <title>Contact</title>
+</head>
+<body>
+    <div id="upper-container">
+        <div id="tabs">
+            <button class="tab-button" onclick="location.href='index.html'">Home</button>
+            <button class="tab-button" onclick="location.href='projects.html'">Projects</button>
+            <button class="tab-button" onclick="location.href='about.html'">About</button>
+            <button class="tab-button" onclick="location.href='contact.html'">Contact</button>
+        </div>
+        <div id="title">
+            <h2>Contact</h2>
+        </div>
+    </div>
+    <div id="information-container">
+        <h2 id="personal">Personal Email → zgould24@gmail.com</h2>
+        <h2 id="work">Work Email → zgould@rollins.edu</h2> 
+        <form name="Form" id="information-form" action="contact.php" method="POST">
+            <h2>Contact Me!</h2>
+            <div id="break"></div>
+            <input id="first" class="input" name="firstname" type="text" placeholder="First Name" maxlength="50" onchange="correctInput(this)">
+            <input class="input" name="lastname" type="text" placeholder="Last Name" maxlength="50" onchange="correctInput(this)">
+            <p id="emptyFieldError">Email is required</p>
+            <input id="email" class="input" name="email" type="text" placeholder="Email" maxlength="50">
+            <textarea name="message" placeholder="Leave a message for me!" maxlength="200"></textarea>
+            <button id="submit" name="submit">Submit</button>
+        </form>
+    </div>
+    <div id="bottom-bar">
+        <p>Icons by&nbsp;<a href="https://icons8.com/">Icons8</a></p>
+        <div id="icons">
+            <a href="https://www.linkedin.com/in/zacharyagould/"><img src="linkedin.png" alt="Linkedin"></a>
+            <a href="https://github.com/Zgould24?tab=repositories"><img src="github.png" alt="GitHub"></a>
+            <a href="https://www.instagram.com/zach_gold24/"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    </div>
+
+<script>
+    const form = document.getElementById("information-form");
+    const submitButton = document.getElementById("submit");
+    const fieldError = document.getElementById("emptyFieldError");
+    var emailField = document.getElementById("email");
+    
+    form.addEventListener("submit", e => {
+
+        //Logic to validate proper email input
+        if(emailField.value.length === 0) {
+            e.preventDefault();
+
+            fieldError.innerHTML = "Email is required";
+            fieldError.style.display = "initial";
+            emailField.style.border = "0.2vw solid rgba(255, 0, 0, 1)";
+            emailField.style.transition = "0ms";
+
+            console.log("empty field");
+        } else {
+            var atSymbol = false, period = false;
+            var atPosition = 0, periodPosition = 0, i = 0;
+
+            while(i < emailField.value.length) {
+                if(emailField.value.charAt(i) === '@' && atSymbol === false) {
+                    atSymbol = true;
+                    atPosition = i;
+                } else if(emailField.value.charAt(i) === '@' && atSymbol === true){
+                    atSymbol = false;
+                    break;
+                }
+                
+                if(emailField.value.charAt(i) === '.' && period === false) {
+                    period = true;
+                    periodPosition = i;
+                } else if(emailField.value.charAt(i) === '.' && period === true){
+                    period = false;
+                    break;
+                }
+
+                i++;
+            }
+
+            if(atSymbol && period) {
+                if(atPosition > periodPosition || atPosition === (periodPosition-1)) {
+                    e.preventDefault();
+                    
+                    fieldError.innerHTML = "Email is not valid";
+                    fieldError.style.display = "initial";
+                    emailField.style.border = "0.3vw solid red";
+                    emailField.style.transition = "0ms";
+                } else {
+                    fieldError.style.display = "none";
+                    emailField.style.border = "none";
+                    emailField.style.transition = "0ms";
+                } 
+            } else {
+                e.preventDefault();
+
+                fieldError.innerHTML = "Email is not valid";
+                fieldError.style.display = "initial";
+                emailField.style.border = "0.3vw solid red";
+                emailField.style.transition = "0ms";
+            }
+        }
+    });
+
+    function correctInput(element) {
+        if(element.value.length > 0) {
+            var firstLetter = element.value.charAt(0).toUpperCase();
+            var subString = element.value.substring(1);
+            element.value = firstLetter + subString;
+        }
+    }
+
+    submitButton.addEventListener("submit", function(event) {
+        event.preventDefault();
+    });
+
+</script>
+<script src="master.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0.295);
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(172, 195, 217);
+    border-radius: 3px;
+}
+
+html {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.disclaimer {
+    display: none;
+}
+
+@media (orientation: portrait) {
+
+    #tabs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: clamp(50px, 15vw, 15vw);
+        height: 50vw;
+        margin-left: 5%;
+    }
+
+    #tabs button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15%;
+        height: clamp(36px, 5vw, 5vw);
+        width: 20vw;
+
+        font-size: clamp(20px, 3vw, 3vw);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        background-color: rgba(172, 195, 217, 0.9);
+        border: none;
+        color: white;
+        text-shadow: 0 0 5px black;
+        box-shadow: 0 0 2vw rgba(0, 0, 0, 0.3);
+        opacity: 0;
+
+        transition: 300ms ease-in-out;
+        -o-transition: 300ms ease-in-out;
+        -moz-transition: 300ms ease-in-out;
+        -webkit-transition: 300ms ease-in-out;
+    }
+
+    button:nth-child(1) {
+        animation: fadeinleft 0.5s forwards ease-in-out;
+        -o-animation: fadeinleft 0.5s forwards ease-in-out;
+        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
+        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+    }
+
+    button:nth-child(2) {
+        animation: fadeinleft 0.5s forwards ease-in-out;
+        -o-animation: fadeinleft 0.5s forwards ease-in-out;
+        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
+        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation-delay: 100ms;
+        -o-animation-delay: 100ms;
+        -moz-animation-delay: 100ms;
+        -webkit-animation-delay: 100ms;
+    }
+
+    button:nth-child(3) {
+        animation: fadeinleft 0.5s forwards ease-in-out;
+        -o-animation: fadeinleft 0.5s forwards ease-in-out;
+        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
+        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation-delay: 200ms;
+        -o-animation-delay: 200ms;
+        -moz-animation-delay: 200ms;
+        -webkit-animation-delay: 200ms;
+    }
+
+    button:nth-child(4) {
+        animation: fadeinleft 0.5s forwards ease-in-out;
+        -o-animation: fadeinleft 0.5s forwards ease-in-out;
+        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
+        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation-delay: 300ms;
+        -o-animation-delay: 300ms;
+        -moz-animation-delay: 300ms;
+        -webkit-animation-delay: 300ms;
+    }
+
+    #tabs button:hover {
+        transform: scale(0.95);
+        -o-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        background-color: rgba(83, 83, 83, 0.5);
+        transition: 300ms ease-in-out;
+        -o-transition: 300ms ease-in-out;
+        -moz-transition: 300ms ease-in-out;
+        -webkit-transition: 300ms ease-in-out;
+    }
+
+    #tabs button:active {
+        transform: scale(0.9);
+        background-color: rgba(27, 27, 27, 0.5);
+        transition: 0.05s ease-in-out;
+        -o-transition: 0.05s ease-in-out;
+        -moz-transition: 0.05s ease-in-out;
+        -webkit-transition: 0.05s ease-in-out;
+    }
+}
+
+@media (orientation: landscape) {
+    #tabs {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+
+        width: 90%;
+        margin-top: clamp(15px, 2vw, 2vw);
+
+        z-index: 1;
+    }
+
+    #tabs button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        padding: 10px 0px 10px;
+        
+        font-size: clamp(20px, 2vw, 2vw);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 100;
+        background: none;
+        border: none;
+        color: white;
+        text-shadow: 0 0 10px white;
+        opacity: 0;
+
+        transition: 300ms ease-in-out;
+        -o-transition: 300ms ease-in-out;
+        -moz-transition: 300ms ease-in-out;
+        -webkit-transition: 300ms ease-in-out;
+    }
+
+    #tabs button:hover {
+        transform: scale(0.95);
+        -o-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        background-color: rgba(255, 255, 255, 0.192);
+        transition: 200ms ease-in-out;
+        -o-transition: 200ms ease-in-out;
+        -moz-transition: 200ms ease-in-out;
+        -webkit-transition: 200ms ease-in-out;
+    }
+
+    #tabs button:active {
+        transform: scale(0.9);
+        background-color: rgba(27, 27, 27, 0.5);
+        transition: 0.05s ease-in-out;
+        -o-transition: 0.05s ease-in-out;
+        -moz-transition: 0.05s ease-in-out;
+        -webkit-transition: 0.05s ease-in-out;
+    }
+}
+
+#bottom-bar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: clamp(25px, 8vw, 30px);
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.678) 0%, rgb(0, 0, 0) 70%);
+}
+
+#bottom-bar p {
+    display: flex;
+    margin-left: 10px;
+    white-space: nowrap;
+
+    color: rgb(163, 163, 163);
+    font-family: 'Raleway', sans-serif;
+}
+
+#bottom-bar p a {
+    text-decoration: none;
+}
+
+#bottom-bar a:visited {
+    color: rgb(101, 137, 255);
+}
+
+#icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    height: 100%;
+}
+
+#icons a {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+#icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+#icons a:hover {
+    transform: scale(0.9);
+    transition: 0.3s ease-in-out;
+}
+
+@keyframes fadein {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes fadeinleft {
+    0% {opacity: 0; transform: translateX(30px)}
+    100% {opacity: 1}
+}
+
+@keyframes fadeinup {
+    0% {opacity: 0; transform: translateY(20px)}
+    100% {opacity: 1};
+}

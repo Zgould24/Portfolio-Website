@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Vujahday+Script&family=Work+Sans:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link href="home-stylesheet.css" rel="stylesheet" />
+  <link href="master-stylesheet.css" rel="stylesheet" />
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <title>Zachary Gould</title>
+    <link rel="icon" type="image/x-icon" href="ZG-logo.ico"/>
+  </head>
+
+  <body>
+    <div>
+      <h1 id="home-title">Home</h1>
+    </div>
+    <img id="profile-pic" src="Headshot.png" />
+
+    <div class="body">
+      <h2 id="welcome">Welcome!</h2>
+      <p class="wrapper" id="intro">HI, MY NAME IS ZACH! I'M A:</p>
+      <p class="wrapper" id="web-dev">•FRONT-END WEB DEVELOPER</p>
+      <p class="wrapper" id="java">•JAVA DEVELOPER</p>
+    </div>
+
+    <div class="responsive-tabs hide-sidebar" id="responsive-tabs">
+      <button class="sidebar-button" onclick="viewSidebar()"></button>
+      <div id="tabs-container">
+        <button
+          id="home"
+          class="tab-alignment"
+          onclick="location.href='home-html.html'"
+        >
+          Home
+        </button>
+        <button
+          id="about-me"
+          class="tab-alignment"
+          onclick="location.href='about-me.html'"
+        >
+          About Me
+        </button>
+        <button
+          id="projects"
+          class="tab-alignment"
+          onclick="location.href='projects-html.html'"
+        >
+          Projects
+        </button>
+        <button
+          id="contact"
+          class="tab-alignment"
+          onclick="location.href='contact-html.html'"
+        >
+          Contact
+        </button>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <a href="https://www.instagram.com/zach_gold24/">
+        <img id="instagram" src="icons8-instagram-50.png" />
+      </a>
+      <a href="https://www.linkedin.com/in/zacharyagould/">
+        <img id="linkedin" src="icons8-linkedin-50.png" />
+      </a>
+      <a href="https://github.com/Zgould24">
+        <img id="github" src="icons8-github-50.png" />
+      </a>
+    </div>
+
+    <script>
+      function viewSidebar() {
+        var sidebar = document.getElementById("responsive-tabs");
+        var classes = sidebar.classList;
+  
+        for(let i = 0; i < classes.length; i++) {
+          if(classes[i] === 'hide-sidebar') {
+            sidebar.classList.remove('hide-sidebar');
+            console.log(classes);
+            sidebar.classList.add('show-sidebar');
+            console.log(classes);
+          } else if (classes[i] === 'show-sidebar') {
+            sidebar.classList.remove('show-sidebar');
+            sidebar.classList.add('hide-sidebar');
+          }
+        }
+      }
+      function hideDisclaimer() {
+        var hide = document.getElementsByClassName('disclaimer');
+        hide[0].style.display="none";
+      }
+      document.addEventListener("DOMContentLoaded", function() {
+        hideDisclaimer();
+      })
+    </script>
+  </body>
+</html>

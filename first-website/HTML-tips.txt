@@ -1,0 +1,28 @@
+<strong></strong> = bolds text
+<b></b> = also bolds text
+</br> = line break
+<img src="" alt=""> = creates an image in your webpage
+    src = name of image and location
+    alt = displays something alternatively when image cannot be found
+<big></big> = makes text slightly bigger
+<small></small> = makes text slightly smaller
+<hr width=""> = creates a horizontal line in your webpage
+<a href="">Link example text</a> = attaches a hyperlink to any text
+<ol></ol> = creates an order list of any list items <li></li> you put in the list using numbers
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+<ul></ul> = creates an unordered list of any list items using dots
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+<form> = creates a form in your webpage
+<label for="input_type">Label Name</label> = creates a label for your input types
+<input type="button/text/etc." name="" placeholder="anything_displayed" required>

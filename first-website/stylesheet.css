@@ -1,0 +1,32 @@
+body {
+    background-color:rgba(240, 116, 8, 0.596);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+/* Use the . for styling any classes */
+.form {
+    text-indent: 10px;
+    color:darkslategrey;
+}
+
+.input-box {
+    margin-left: 10px;
+}
+
+.gender {
+    margin-left: 15px;
+}
+
+#form-page {
+    background-color: rgba(139, 91, 19, 0.377);
+}
+
+/* Usee the # for styling any ids */
+#submit {
+    color: red;
+}

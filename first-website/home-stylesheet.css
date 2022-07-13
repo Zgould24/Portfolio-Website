@@ -1,0 +1,227 @@
+@media (orientation: landscape) {
+
+    body {
+        overflow-x:hidden;
+        overflow-y:hidden;
+    }
+
+    #home-title {
+        background-color:rgba(128, 128, 128, 0.5);
+        transform: translate(-150px, 0px);
+
+        color:rgb(0, 0, 0);
+        height: 70px;
+        width:305px;
+
+        font-family: 'Courier New', Courier, monospace;
+        font-weight:lighter;
+        font-size: 60px;
+
+        text-align:right;
+        text-shadow: 1px 1px rgb(255, 255, 255);
+        padding-right: 10px;
+        text-indent: 20px;
+        line-height: 65px;
+
+        animation: fadeInLeft 0.7s;
+    }
+
+    #profile-pic {
+        width: 25%;
+        height: 100%;
+        transform: translate(60%, 0%);
+        margin-bottom: 30px; 
+
+        border-radius: 50%;
+        animation: fadeInProfilePic 1s;
+    }
+
+    .wrapper {
+        position: fixed;
+
+        margin: 0;
+
+        border-right: 1px solid rgba(0, 0, 0, 0);
+        white-space: nowrap;
+        overflow: hidden;
+
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .body {
+        position: fixed;
+        top: 18%;
+        left: 43%;
+    }
+
+    #welcome {
+        color:rgb(124, 124, 124);
+        text-shadow: 1px 1px rgb(255, 255, 255);
+
+        font-family: 'Vujahday Script', cursive;
+        font-size: 500%;
+
+        animation: fadeInBio 1s;
+    }
+
+    #intro {
+        position:absolute;
+        width: 27ch;
+        top: 75%;
+        left: 10%;
+
+        font-size: 250%;
+        color: rgba(0, 0, 0, 0);
+
+        animation: typing 1s steps(27) forwards, typing-line 0.5s 6;
+        animation-delay: 1.5s;
+    }
+
+    #web-dev {
+        position: absolute;
+        width: 24ch;
+        top: 100%;
+        left: 15%;
+
+        font-size: 30px;
+        color: rgba(0, 0, 0, 0);
+
+        animation: typing 1s steps(24) forwards, typing-line 0.5s 3;
+        animation-delay: 4.5s;
+    }
+
+    #java {
+        position: absolute;
+        width: 15ch;
+        top: 120%;
+        left: 15%;
+
+        font-size: 30px;
+        color: rgba(0, 0, 0, 0);
+
+        animation: typing 1s steps(15) forwards, typing-line 0.5s 5;
+        animation-delay: 5.9s;
+    }
+}
+
+@media (orientation: portrait) {
+
+    body {
+        overflow-y: none;
+    }
+
+    #home-title {
+        background-color:rgba(128, 128, 128, 0.5);
+        transform: translate(-150px, 0px);
+
+        color:rgb(0, 0, 0);
+        height: 70px;
+        width:305px;
+
+        font-family: 'Courier New', Courier, monospace;
+        font-weight:lighter;
+        font-size: 60px;
+
+        text-align:right;
+        text-shadow: 1px 1px rgb(255, 255, 255);
+        padding-right: 10px;
+        text-indent: 20px;
+        line-height: 65px;
+
+        animation: fadeInLeft 0.7s;
+    }
+
+    #profile-pic {
+        position: relative;
+        display: block;
+        width: 250px;
+        
+        margin: auto;
+
+        border-radius: 50%;
+        animation: fadeInBio 1s;
+    }
+
+    .wrapper {
+        border-right: 1px solid rgba(0, 0, 0, 0);
+        white-space: nowrap;
+        overflow: hidden;
+
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #welcome {
+        color:rgb(124, 124, 124);
+        text-shadow: 1px 1px rgb(255, 255, 255);
+        margin-bottom: -1rem;
+
+        font-family: 'Vujahday Script', cursive;
+        font-size: 5rem;
+
+        animation: fadeInBio 1s;
+    }
+
+    #intro {
+        width: 27ch;
+
+        font-size: 1.5rem;
+        color: rgba(0, 0, 0, 0);
+
+        animation: typing 1s steps(27) forwards, typing-line 0.5s 6;
+        animation-delay: 1.5s;
+    }
+
+    #web-dev {
+        width: 24ch;
+
+        font-size: 1.25rem;
+        color: rgba(0, 0, 0, 0);
+
+        animation: typing 1s steps(24) forwards, typing-line 0.5s 3;
+        animation-delay: 4.5s;
+    }
+
+    #java {
+        width: 15ch;
+        margin-bottom: 5rem;
+
+        font-size: 1.25rem;
+        color: rgba(0, 0, 0, 0);
+
+        animation: typing 1s steps(15) forwards, typing-line 0.5s 5;
+        animation-delay: 5.9s;
+    }
+}
+
+@keyframes fadeInProfilePic {
+    0%{opacity:0; transform: translate(55%, 0%)}
+    10%{opacity:0;}
+    100%{opacity:1;}
+}
+
+@keyframes fadeInBio {
+    0%{opacity:0; transform:translate(5%);}
+    20%{opacity:0;}
+    100%{opacity:1;}
+}
+
+@keyFrames fadeInLeft {
+    0%{opacity:0; transform: translate(-50px,0px)}
+    10%{opacity:0; transform: translate(-50px,0px)}
+    100%{opacity:1;}
+}
+
+@keyframes typing {
+    0% {width:0; color: black;}
+    to{color: black;}
+}
+
+@keyframes typing-line {
+    0%{border-right-color: black;}
+    30%{border-right-color: black;}
+    100%{border-right-color:rgba(0, 0, 0, 0)}
+}

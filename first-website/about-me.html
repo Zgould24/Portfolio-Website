@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap"
+    rel="stylesheet"
+  />
+  <link href="master-stylesheet.css" rel="stylesheet" />
+  <link href="about-stylesheet.css" rel="stylesheet" />
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="icon" type="image/x-icon" href="ZG-logo.ico"/>
+  </head>
+
+  <body>
+    <div>
+      <h1 id="about-title">About Me</h1>
+    </div>
+
+    <div class="responsive-tabs hide-sidebar" id="responsive-tabs">
+      <button class="sidebar-button" onclick="viewSidebar()"></button>
+      <div id="tabs-container">
+        <button
+          id="home"
+          class="tab-alignment"
+          onclick="location.href='home-html.html'"
+        >
+          Home
+        </button>
+        <button
+          id="about-me"
+          class="tab-alignment"
+          onclick="location.href='about-me.html'"
+        >
+          About Me
+        </button>
+        <button
+          id="projects"
+          class="tab-alignment"
+          onclick="location.href='projects-html.html'"
+        >
+          Projects
+        </button>
+        <button
+          id="contact"
+          class="tab-alignment"
+          onclick="location.href='contact-html.html'"
+        >
+          Contact
+        </button>
+      </div>
+    </div>
+
+    <div id="bio-back">
+      <div id="bio-text">
+        <p>
+          I am currently finishing my senior year at Rollins College, earning my
+          Bachelors Degree in Computer Science & Music. I have been invested and
+          passionate about software development since high school, which has led
+          me to pursue it in college. I have absolutely loved the challenges
+          that software development has presented to me, and continues to, so
+          that I may utilize my problem solving skills - combining it with my
+          creative expression to form working software.
+        </p>
+
+        <p>
+          Throughout my journey at Rollins College, I have been able to work
+          with languages such as Java, Python and C. These created the gateway I
+          needed to expand my software knowledge on my own. Learning concepts
+          such as Object-Oriented Programming, the System Development Life Cycle
+          and Secure Software Engineering have not only taught me the importance
+          of how systems functioned, but why they function, as well. Major
+          topics such as these have also taught me important collaboration
+          skills and communication skills as I have worked with many groups to
+          complete assignments and other projects.
+        </p>
+        <p>
+          I have narrowed my focus in the software development world towards web
+          development. Here, I found that I am able to use my problem solving
+          and creative skills to invest my work into a product that finds a
+          balance of <u>quality</u> and <u>quantity</u>.
+        </p>
+        <p>
+          My goal is to be proficient in Front-End development before I move on
+          to Back-End development, where I hope to utilize my Java skills and
+          expand from Java as I progress. The end goal is for me to become a
+          Full-Stack developer so that I may become a versatile and resourceful
+          web developer. I hope that throughout my life, my work benefits and
+          inspires many.
+        </p>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <a href="https://www.instagram.com/zach_gold24/">
+        <img id="instagram" src="icons8-instagram-50.png" />
+      </a>
+      <a href="https://www.linkedin.com/in/zacharyagould/">
+        <img id="linkedin" src="icons8-linkedin-50.png" />
+      </a>
+      <a href="https://github.com/Zgould24">
+        <img id="github" src="icons8-github-50.png" />
+      </a>
+    </div>
+  </body>
+  <script>
+    function viewSidebar() {
+      var sidebar = document.getElementById("responsive-tabs");
+      var classes = sidebar.classList;
+
+      for(let i = 0; i < classes.length; i++) {
+        if(classes[i] === 'hide-sidebar') {
+          sidebar.classList.remove('hide-sidebar');
+          console.log(classes);
+          sidebar.classList.add('show-sidebar');
+          console.log(classes);
+        } else if (classes[i] === 'show-sidebar') {
+          sidebar.classList.remove('show-sidebar');
+          sidebar.classList.add('hide-sidebar');
+        }
+      }
+    }
+    
+    var hide = document.getElementsByClassName('disclaimer');
+    for(let i =0; i < hide.length; i++) {
+        hide[i].style.display='none';
+    }
+  </script>
+</html>

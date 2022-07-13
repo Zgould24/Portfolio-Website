@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link href="guess.css" rel="stylesheet">
+    <title>Guessing Game</title>
+</head>
+<body>
+    <h1 class="title">Guess The Number!</h1>
+    <h2 class="conversation">What number am I guessing?</h2>
+    <div class="info-container">
+        <div class="line-one">
+            <p class="text">Number of Attempts:&nbsp</p>  <!--nbsp is a way to create a non-breaking space-->
+            <p class="attempts">10</p>
+        </div>
+        <div class="line-two">
+            <p class="text">High Score:&nbsp</p>
+            <p class="highscore">0</p>
+        </div>
+        <input type="number" class="num-input" min="1" max="10" maxlength="2" value="1" onchange="checkNum(this)">
+        <button class="btn" onclick="numberGuess">Guess!</button>
+    </div>
+</body>
+<script src="guess.js"></script>
+</html>

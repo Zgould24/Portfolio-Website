@@ -1,0 +1,292 @@
+#project-title {
+  background-color: rgba(128, 128, 128, 0.5);
+  transform: translate(-150px, 0px);
+
+  color: rgb(0, 0, 0);
+  height: 70px;
+  width: 450px;
+
+  font-family: "Courier New", Courier, monospace;
+  font-weight: lighter;
+  font-size: 60px;
+
+  text-align: right;
+  text-shadow: 1px 1px rgb(255, 255, 255);
+  padding-right: 10px;
+  text-indent: 20px;
+  line-height: 65px;
+
+  animation: fadeInLeftTitle 0.7s;
+}
+
+@media (orientation: landscape) {
+
+    body {
+      overflow-x: hidden;
+      padding-bottom: 100px;
+    }
+
+    #spacesquad-container {
+      display: flex;
+      position: relative;
+      width: 20%;
+      justify-content: center;
+      vertical-align: bottom;
+    }
+    
+    #spacesquad-container img {
+      width: 200px;
+      height: 200px;
+      margin: 1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: center;
+      box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.507);
+    }
+    
+    #lexical-container {
+      display: flex;
+      width: 20%;
+      justify-content: center;
+    }
+    
+    #lexical-container img {
+      width: 95%;
+      height: 85%;
+      align-self: center;
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.507);
+    }
+    
+    #website-container {
+      display: flex;
+      width: 20%;
+      justify-content: center;
+    }
+    
+    #website-container img {
+      width: 90%;
+      height: 200px;
+      margin: 1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: center;
+      box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.507);
+    }
+    
+    #project1 {
+      animation: fadeInProject 0.7s ease-in-out forwards;
+      opacity: 0;
+    }
+    
+    #project2 {
+      animation: fadeInProject 0.7s ease-in-out forwards;
+      opacity: 0;
+      animation-delay: 0.1s;
+    }
+    #project3 {
+      animation: fadeInProject 0.7s ease-in-out forwards;
+      opacity: 0;
+      animation-delay: 0.2s;
+    }
+    
+    .description-container {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      padding: 1rem;
+      font-family: "Courier New", Courier, monospace;
+    }
+    
+    .description-container h1 {
+      display: flex;
+      font-size: 2.5rem;
+      margin-top: -0.5rem;
+      margin-bottom: -0.5rem;
+      color: rgb(124, 124, 124);
+      text-align: center;
+    }
+    
+    .description-container h1 a {
+      text-decoration: none;
+      transition: 0.2s ease-in-out;
+      text-align: center;
+    }
+    
+    .description-container h1 a:visited {
+      color: rgb(124, 124, 124);
+    }
+    
+    .description-container h1 a:hover {
+      color: rgb(70, 70, 70);
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.404);
+      transition: 0.2s ease-in-out;
+    }
+    
+    .description-container p {
+      display: flex;
+      align-self: center;
+    }
+    
+    .project-display {
+      display: flex;
+      margin-left: 1vw;
+      margin-right: 0.5vw;
+      margin-bottom: 4vw;
+      font-size: 1rem;
+      background-color: rgb(255, 241, 220);
+      flex-direction: row;
+    }
+}
+
+@media (orientation: portrait) {
+    
+    body {
+      overflow-x: hidden;
+      padding-bottom: 100px;
+      padding: 0px 10px 10px 10px;
+    }
+    
+    #spacesquad-container {
+      display: flex;
+      position: relative;
+      width: 20%;
+      justify-content: center;
+      vertical-align: bottom;
+    }
+    
+    #spacesquad-container img {
+      width: 30vw;
+      height: 20vh;
+      margin: 1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: center;
+      box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.507);
+    }
+    
+    #lexical-container {
+      display: flex;
+      width: 20%;
+      justify-content: center;
+    }
+    
+    #lexical-container img {
+      width: 30vw;
+      height: 20vh;
+      align-self: center;
+      margin: 1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.507);
+    }
+    
+    #website-container {
+      display: flex;
+      width: 20%;
+      justify-content: center;
+      flex-direction: column;
+    }
+    
+    #website-container img {
+      width: 30vw;
+      min-width: 250px;
+      height: 20vh;
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.507);
+    }
+    
+    #project1 {
+      animation: fadeInProject 0.7s ease-in-out forwards;
+      opacity: 0;
+    }
+    
+    #project2 {
+      animation: fadeInProject 0.7s ease-in-out forwards;
+      opacity: 0;
+      animation-delay: 0.1s;
+    }
+    #project3 {
+      animation: fadeInProject 0.7s ease-in-out forwards;
+      opacity: 0;
+      animation-delay: 0.2s;
+    }
+    
+    .description-container {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      padding: 1rem;
+      font-family: "Courier New", Courier, monospace;
+      text-align: center;
+    }
+    
+    .description-container h1 {
+      display: flex;
+      font-size: 2rem;
+      margin-top: -0.5rem;
+      margin-bottom: -0.5rem;
+      color: rgb(124, 124, 124);
+    }
+    
+    .description-container h1 a {
+      text-decoration: none;
+      transition: 0.2s ease-in-out;
+      margin: auto;
+    }
+    
+    .description-container h1 a:visited {
+      color: rgb(124, 124, 124);
+    }
+    
+    .description-container h1 a:hover {
+      color: rgb(70, 70, 70);
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.404);
+      transition: 0.2s ease-in-out;
+    }
+    
+    .description-container p {
+      display: flex;
+      align-self: center;
+    }
+    
+    .project-display {
+      display: flex;
+      margin-left: 1vw;
+      margin-right: 0.5vw;
+      margin-bottom: 4vw;
+      font-size: 1rem;
+      background-color: rgb(255, 241, 220);
+      flex-direction: column;
+      align-items: center;
+    }
+}
+
+@keyframes fadeInLeftTitle {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 0px);
+  }
+  10% {
+    opacity: 0;
+    transform: translate(0px, 0px);
+  }
+  100% {opacity: 1;}
+}
+
+@keyframes fadeInProject {
+  0% {transform: translateX(20px);}
+  40% {opacity: 0;}
+  100% {opacity: 1;}
+}

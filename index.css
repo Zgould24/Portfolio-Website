@@ -1,0 +1,200 @@
+body {
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#title-splash-screen {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(black, rgba(6, 44, 80, 1));
+}
+
+@media (orientation: landscape) {
+    #left-panel {
+        display: flex;
+        height: 100%;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #profile-picture {
+        display: flex;
+        width: 70%;
+
+        border-radius: 100%;
+        opacity: 0;
+
+        animation: fadeInLeft 2s ease-in-out forwards;
+    }
+
+    #right-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+    }
+
+    #right-panel h2 {
+        color: rgb(146, 221, 255);
+        font-size: clamp(30px, 4vw, 4vw);
+        font-weight: 200;
+        text-align: center;
+        text-shadow: 0 0 10px white;
+        opacity: 0;
+
+        animation: fadeInRight 2s ease-in-out forwards;
+    }
+
+    #vertical-split {
+        display: flex;
+        width: 1px;
+        height: 60%;
+        align-self: center;
+
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+        opacity: 0;
+
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    #horizontal-split {
+        display: flex;
+        width: 90%;
+        height: 1px;
+
+        background-color: rgba(255, 255, 255, 0.5);
+
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    #main-text {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+
+        
+        background-image: linear-gradient(rgba(6, 44, 80, 1), rgb(45, 69, 105));
+    }
+
+    #header-1 {
+        margin-left: 20px;
+        color: rgb(0, 174, 255);
+    }
+
+    #header-2 {
+        align-self: center;
+    }   
+
+    #header-3 {
+        margin-right: 20px;
+        align-self: flex-end;
+
+        color: rgb(146, 221, 255);
+    }   
+
+    #bulk-text {
+        margin: 50px 20px 100px;
+        align-self: center;
+        text-align: center;
+        font-size: clamp(20px, 2vw, 2vw);
+        font-weight: 100;
+        text-shadow: 0 0 10px white;
+    }
+
+    .header {
+        font-size: clamp(80px, 5vw, 5vw);
+        font-weight: 400;
+        text-shadow: 0 0 20px rgb(131, 206, 255);
+    }
+
+    .text {
+        color: white;
+        opacity: 0;
+    }
+}
+
+.tab-button:nth-child(1) {
+    margin-right: 2vw;
+    animation: fadeinleft 700ms forwards ease-in-out;
+    -o-animation: fadeinleft 700ms forwards ease-in-out;
+    -moz-animation: fadeinleft 700ms forwards ease-in-out;
+    -webkit-animation: fadeinleft 700ms forwards ease-in-out;
+    animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+}
+
+.tab-button:nth-child(2) {
+    margin-right: 2vw;
+    animation: fadeinleft 700ms forwards ease-in-out;
+    -o-animation: fadeinleft 700ms forwards ease-in-out;
+    -moz-animation: fadeinleft 700ms forwards ease-in-out;
+    -webkit-animation: fadeinleft 700ms forwards ease-in-out;
+    animation-delay: 1.6s;
+    -o-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    -webkit-animation-delay: 1.6s;
+}
+
+.tab-button:nth-child(3) {
+    margin-right: 2vw;
+    animation: fadeinleft 700ms forwards ease-in-out;
+    -o-animation: fadeinleft 700ms forwards ease-in-out;
+    -moz-animation: fadeinleft 700ms forwards ease-in-out;
+    -webkit-animation: fadeinleft 700ms forwards ease-in-out;
+    animation-delay: 1.7s;
+    -o-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+    -webkit-animation-delay: 1.7s;
+}
+
+.tab-button:nth-child(4) {
+    animation: fadeinleft 700ms forwards ease-in-out;
+    -o-animation: fadeinleft 700ms forwards ease-in-out;
+    -moz-animation: fadeinleft 700ms forwards ease-in-out;
+    -webkit-animation: fadeinleft 700ms forwards ease-in-out;
+    animation-delay: 1.8s;
+    -o-animation-delay: 1.8s;
+    -moz-animation-delay: 1.8s;
+    -webkit-animation-delay: 1.8s;
+}
+
+.fadeInUp {
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    0%{transform: translateY(100px);}
+    20%{opacity: 0}
+    100%{opacity: 1}
+}
+
+@keyframes fadeInLeft {
+    0%{transform: translateX(-100px)}
+    40%{opacity: 0}
+    100%{opacity: 1}
+}
+
+@keyframes fadeInRight {
+    0%{transform: translateX(100px)}
+    40%{opacity: 0}
+    100%{opacity: 1}
+}
+
+@keyframes fadeIn {
+    0%{opacity: 0}
+    40%{opacity: 0}
+    100%{opacity: 1}
+}
