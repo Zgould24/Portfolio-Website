@@ -22,7 +22,7 @@ body {
     display: none;
 }
 
-@media (orientation: portrait) {
+@media (max-width: 999px) {
 
     #tabs {
         display: flex;
@@ -43,12 +43,12 @@ body {
 
         font-size: clamp(20px, 3vw, 3vw);
         font-family: 'Montserrat', sans-serif;
-        font-weight: 300;
-        background-color: rgba(172, 195, 217, 0.9);
+        font-weight: 100;
+        background-image: linear-gradient(rgba(6, 44, 80, 1), black);
         border: none;
         color: white;
-        text-shadow: 0 0 5px black;
-        box-shadow: 0 0 2vw rgba(0, 0, 0, 0.3);
+        text-shadow: 0 0 5px rgb(255, 255, 255);
+        box-shadow: 0 0 10px rgba(0, 0, 0);
         opacity: 0;
 
         transition: 300ms ease-in-out;
@@ -58,17 +58,17 @@ body {
     }
 
     button:nth-child(1) {
-        animation: fadeinleft 0.5s forwards ease-in-out;
-        -o-animation: fadeinleft 0.5s forwards ease-in-out;
-        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
-        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation: fadeinright 1s forwards ease-in-out;
+        -o-animation: fadeinright 1s forwards ease-in-out;
+        -moz-animation: fadeinright 1s forwards ease-in-out;
+        -webkit-animation: fadeinright 1s forwards ease-in-out;
     }
 
     button:nth-child(2) {
-        animation: fadeinleft 0.5s forwards ease-in-out;
-        -o-animation: fadeinleft 0.5s forwards ease-in-out;
-        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
-        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation: fadeinright 1s forwards ease-in-out;
+        -o-animation: fadeinright 1s forwards ease-in-out;
+        -moz-animation: fadeinright 1s forwards ease-in-out;
+        -webkit-animation: fadeinright 1s forwards ease-in-out;
         animation-delay: 100ms;
         -o-animation-delay: 100ms;
         -moz-animation-delay: 100ms;
@@ -76,10 +76,10 @@ body {
     }
 
     button:nth-child(3) {
-        animation: fadeinleft 0.5s forwards ease-in-out;
-        -o-animation: fadeinleft 0.5s forwards ease-in-out;
-        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
-        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation: fadeinright 1s forwards ease-in-out;
+        -o-animation: fadeinright 1s forwards ease-in-out;
+        -moz-animation: fadeinright 1s forwards ease-in-out;
+        -webkit-animation: fadeinright 1s forwards ease-in-out;
         animation-delay: 200ms;
         -o-animation-delay: 200ms;
         -moz-animation-delay: 200ms;
@@ -87,10 +87,10 @@ body {
     }
 
     button:nth-child(4) {
-        animation: fadeinleft 0.5s forwards ease-in-out;
-        -o-animation: fadeinleft 0.5s forwards ease-in-out;
-        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
-        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation: fadeinright 1s forwards ease-in-out;
+        -o-animation: fadeinright 1s forwards ease-in-out;
+        -moz-animation: fadeinright 1s forwards ease-in-out;
+        -webkit-animation: fadeinright 1s forwards ease-in-out;
         animation-delay: 300ms;
         -o-animation-delay: 300ms;
         -moz-animation-delay: 300ms;
@@ -120,7 +120,7 @@ body {
     }
 }
 
-@media (orientation: landscape) {
+@media (min-width: 1000px) {
     #tabs {
         display: flex;
         flex-direction: row;
@@ -237,6 +237,12 @@ body {
 
 @keyframes fadeinleft {
     0% {opacity: 0; transform: translateX(30px)}
+    100% {opacity: 1}
+}
+
+@keyframes fadeinright {
+    0% {opacity: 0; transform: translateX(-30px)}
+    40% {opacity: 0;}
     100% {opacity: 1}
 }
 

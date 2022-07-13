@@ -27,8 +27,8 @@ body {
     }
 }
 
-@media (orientation: portrait) {
-    @media (max-width: 400px) {
+@media (max-width: 999px) {
+    /* @media (max-width: 400px) {
         #title {
             margin-right: 8vw;
         }
@@ -50,7 +50,7 @@ body {
         #personal {
             margin-top: 0;
         }
-    }
+    } */
 
     #upper-container {
         display: flex;
@@ -68,6 +68,7 @@ body {
         height: 40%;
         align-self: center;
         padding: 2vw 2vw 2vw;
+        margin-right: 4vw;
     
         background-image: linear-gradient(rgba(6, 44, 80, 1), black);
         border: 3px solid black;
@@ -199,7 +200,7 @@ body {
     }
 } 
 
-@media (orientation: landscape) {
+@media (min-width: 1000px) {
 
     #upper-container {
         display: flex;
@@ -226,7 +227,7 @@ body {
     #title h2 {
         margin: auto;
     
-        font-size: 6vw;
+        font-size: 75px;
         font-family: 'Montserrat', sans-serif;
         font-weight: 100;
         color: white;
@@ -248,14 +249,14 @@ body {
         align-items: center;
         width: clamp(180px, 50%, 50%);
     
-        background-color: rgba(87, 93, 148, 0.356);
+        background-color: rgba(53, 83, 122, 0.356);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
     
     #information-form h2 {
         font-size: clamp(36px, 4vw, 4vw);
         font-family: 'Montserrat', sans-serif;
-        font-weight: 200;
+        font-weight: 100;
         color: white;
         text-shadow: 0 0 5px black;
     }
@@ -342,6 +343,49 @@ body {
     
         transition: 300ms ease-in-out;
     }
+
+    .tab-button:nth-child(1) {
+        margin-right: 2vw;
+        animation: fadeinleft 0.5s forwards ease-in-out;
+        -o-animation: fadeinleft 0.5s forwards ease-in-out;
+        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
+        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+    }
+    
+    .tab-button:nth-child(2) {
+        margin-right: 2vw;
+        animation: fadeinleft 0.5s forwards ease-in-out;
+        -o-animation: fadeinleft 0.5s forwards ease-in-out;
+        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
+        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation-delay: 100ms;
+        -o-animation-delay: 100ms;
+        -moz-animation-delay: 100ms;
+        -webkit-animation-delay: 100ms;
+    }
+    
+    .tab-button:nth-child(3) {
+        margin-right: 2vw;
+        animation: fadeinleft 0.5s forwards ease-in-out;
+        -o-animation: fadeinleft 0.5s forwards ease-in-out;
+        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
+        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation-delay: 200ms;
+        -o-animation-delay: 200ms;
+        -moz-animation-delay: 200ms;
+        -webkit-animation-delay: 200ms;
+    }
+    
+    .tab-button:nth-child(4) {
+        animation: fadeinleft 0.5s forwards ease-in-out;
+        -o-animation: fadeinleft 0.5s forwards ease-in-out;
+        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
+        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation-delay: 300ms;
+        -o-animation-delay: 300ms;
+        -moz-animation-delay: 300ms;
+        -webkit-animation-delay: 300ms;
+    }
 }
 
 #personal {
@@ -351,7 +395,7 @@ body {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.404);
     font-size: clamp(16px, 4vw, 36px);
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 100;
     opacity: 0;
 
     animation: fadeinupsmooth 1s forwards ease-in-out;
@@ -366,7 +410,7 @@ body {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.404);
     font-size: clamp(16px, 4vw, 36px);
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 100;
     opacity: 0;
 
     animation: fadeinupsmooth 1s forwards ease-in-out;
@@ -396,49 +440,6 @@ body {
     opacity: 0;
 
     animation: fadein 1s forwards ease-in;
-}
-
-.tab-button:nth-child(1) {
-    margin-right: 2vw;
-    animation: fadeinleft 0.5s forwards ease-in-out;
-    -o-animation: fadeinleft 0.5s forwards ease-in-out;
-    -moz-animation: fadeinleft 0.5s forwards ease-in-out;
-    -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
-}
-
-.tab-button:nth-child(2) {
-    margin-right: 2vw;
-    animation: fadeinleft 0.5s forwards ease-in-out;
-    -o-animation: fadeinleft 0.5s forwards ease-in-out;
-    -moz-animation: fadeinleft 0.5s forwards ease-in-out;
-    -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
-    animation-delay: 100ms;
-    -o-animation-delay: 100ms;
-    -moz-animation-delay: 100ms;
-    -webkit-animation-delay: 100ms;
-}
-
-.tab-button:nth-child(3) {
-    margin-right: 2vw;
-    animation: fadeinleft 0.5s forwards ease-in-out;
-    -o-animation: fadeinleft 0.5s forwards ease-in-out;
-    -moz-animation: fadeinleft 0.5s forwards ease-in-out;
-    -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
-    animation-delay: 200ms;
-    -o-animation-delay: 200ms;
-    -moz-animation-delay: 200ms;
-    -webkit-animation-delay: 200ms;
-}
-
-.tab-button:nth-child(4) {
-    animation: fadeinleft 0.5s forwards ease-in-out;
-    -o-animation: fadeinleft 0.5s forwards ease-in-out;
-    -moz-animation: fadeinleft 0.5s forwards ease-in-out;
-    -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
-    animation-delay: 300ms;
-    -o-animation-delay: 300ms;
-    -moz-animation-delay: 300ms;
-    -webkit-animation-delay: 300ms;
 }
 
 @keyframes typingAffect {

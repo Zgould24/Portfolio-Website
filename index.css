@@ -14,7 +14,129 @@ body {
     background-image: linear-gradient(black, rgba(6, 44, 80, 1));
 }
 
-@media (orientation: landscape) {
+@media (max-width: 999px) {
+    body {
+        background-image: linear-gradient(black, rgba(6, 44, 80, 1));
+        background-attachment: fixed;
+    }
+
+    #title-splash-screen {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: fit-content;
+
+        background-image: url("headshot.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #profile-picture {
+        display: none;
+    }
+    
+    #left-panel {
+        display: none;
+    }
+
+    #panel {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2vw;
+        right: 0;
+        top: 15vw;
+        width: 40%;
+        height: 20vw;
+
+        background-image: linear-gradient(rgba(6, 44, 80, 1), black);
+        box-shadow: 0 0 10px black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.25vw;
+        opacity: 0;
+
+        animation: fadeInRight 1s ease-in-out forwards;
+    }
+
+    #panel h2 {
+        font-weight: 100;
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+    }
+
+    #horizontal-split {
+        display: flex;
+        width: 90%;
+        height: 2px;
+
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+    
+    #right-panel {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #right-panel h2 {
+        color: white;
+    }
+
+    #main-text {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        
+        border-top: 3px ridge white;
+        
+    }
+
+    #header-1 {
+        margin-left: 3vw;
+
+        color: rgb(0, 174, 255);
+        font-family: 'Edu QLD Beginner', cursive;
+    }
+
+    #header-2 {
+        align-self: center;
+
+        font-family: 'Cormorant SC', serif;
+    }   
+
+    #header-3 {
+        margin-right: 3vw;
+        align-self: flex-end;
+
+        color: rgb(146, 221, 255);
+        font-family: 'Philosopher', sans-serif;
+    }   
+
+    #bulk-text {
+        margin: 50px 5VW 100px;
+        align-self: center;
+        text-align: center;
+        font-size: clamp(20px, 2vw, 2vw);
+        font-weight: 100;
+        text-shadow: 0 0 10px white;
+    }
+
+    .header {
+        font-size: clamp(30px, 8vw, 10vw);
+        font-weight: 400;
+        text-shadow: 0 0 20px rgb(131, 206, 255);
+    }
+
+    .text {
+        color: white;
+        opacity: 0;
+    }
+}
+
+@media (min-width: 1000px) {
     #left-panel {
         display: flex;
         height: 100%;
@@ -25,9 +147,8 @@ body {
 
     #profile-picture {
         display: flex;
-        width: 70%;
+        width: 90%;
 
-        border-radius: 100%;
         opacity: 0;
 
         animation: fadeInLeft 2s ease-in-out forwards;
@@ -43,9 +164,9 @@ body {
     }
 
     #right-panel h2 {
-        color: rgb(146, 221, 255);
+        color: rgb(255, 255, 255);
         font-size: clamp(30px, 4vw, 4vw);
-        font-weight: 200;
+        font-weight: 100;
         text-align: center;
         text-shadow: 0 0 10px white;
         opacity: 0;
@@ -55,13 +176,12 @@ body {
 
     #vertical-split {
         display: flex;
-        width: 1px;
-        height: 60%;
+        width: 2px;
+        height: 80%;
         align-self: center;
 
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(141, 141, 141, 0.1);
         border-radius: 10px;
-        opacity: 0;
 
         animation: fadeIn 1s ease-in-out forwards;
     }
@@ -69,9 +189,10 @@ body {
     #horizontal-split {
         display: flex;
         width: 90%;
-        height: 1px;
+        height: 2px;
 
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(141, 141, 141, 0.1);
+        border-radius: 10px;
 
         animation: fadeIn 1s ease-in-out forwards;
     }
@@ -82,29 +203,33 @@ body {
         flex-direction: column;
         width: 100%;
         height: fit-content;
-
         
         background-image: linear-gradient(rgba(6, 44, 80, 1), rgb(45, 69, 105));
     }
 
     #header-1 {
-        margin-left: 20px;
+        margin-left: 3vw;
+
         color: rgb(0, 174, 255);
+        font-family: 'Edu QLD Beginner', cursive;
     }
 
     #header-2 {
         align-self: center;
+
+        font-family: 'Cormorant SC', serif;
     }   
 
     #header-3 {
-        margin-right: 20px;
+        margin-right: 3vw;
         align-self: flex-end;
 
         color: rgb(146, 221, 255);
+        font-family: 'Philosopher', sans-serif;
     }   
 
     #bulk-text {
-        margin: 50px 20px 100px;
+        margin: 50px 5VW 100px;
         align-self: center;
         text-align: center;
         font-size: clamp(20px, 2vw, 2vw);
@@ -113,7 +238,7 @@ body {
     }
 
     .header {
-        font-size: clamp(80px, 5vw, 5vw);
+        font-size: clamp(80px, 8vw, 10vw);
         font-weight: 400;
         text-shadow: 0 0 20px rgb(131, 206, 255);
     }
@@ -122,53 +247,53 @@ body {
         color: white;
         opacity: 0;
     }
-}
 
-.tab-button:nth-child(1) {
-    margin-right: 2vw;
-    animation: fadeinleft 700ms forwards ease-in-out;
-    -o-animation: fadeinleft 700ms forwards ease-in-out;
-    -moz-animation: fadeinleft 700ms forwards ease-in-out;
-    -webkit-animation: fadeinleft 700ms forwards ease-in-out;
-    animation-delay: 1.5s;
-    -o-animation-delay: 1.5s;
-    -moz-animation-delay: 1.5s;
-    -webkit-animation-delay: 1.5s;
-}
-
-.tab-button:nth-child(2) {
-    margin-right: 2vw;
-    animation: fadeinleft 700ms forwards ease-in-out;
-    -o-animation: fadeinleft 700ms forwards ease-in-out;
-    -moz-animation: fadeinleft 700ms forwards ease-in-out;
-    -webkit-animation: fadeinleft 700ms forwards ease-in-out;
-    animation-delay: 1.6s;
-    -o-animation-delay: 1.6s;
-    -moz-animation-delay: 1.6s;
-    -webkit-animation-delay: 1.6s;
-}
-
-.tab-button:nth-child(3) {
-    margin-right: 2vw;
-    animation: fadeinleft 700ms forwards ease-in-out;
-    -o-animation: fadeinleft 700ms forwards ease-in-out;
-    -moz-animation: fadeinleft 700ms forwards ease-in-out;
-    -webkit-animation: fadeinleft 700ms forwards ease-in-out;
-    animation-delay: 1.7s;
-    -o-animation-delay: 1.7s;
-    -moz-animation-delay: 1.7s;
-    -webkit-animation-delay: 1.7s;
-}
-
-.tab-button:nth-child(4) {
-    animation: fadeinleft 700ms forwards ease-in-out;
-    -o-animation: fadeinleft 700ms forwards ease-in-out;
-    -moz-animation: fadeinleft 700ms forwards ease-in-out;
-    -webkit-animation: fadeinleft 700ms forwards ease-in-out;
-    animation-delay: 1.8s;
-    -o-animation-delay: 1.8s;
-    -moz-animation-delay: 1.8s;
-    -webkit-animation-delay: 1.8s;
+    .tab-button:nth-child(1) {
+        margin-right: 2vw;
+        animation: fadeinleft 700ms forwards ease-in-out;
+        -o-animation: fadeinleft 700ms forwards ease-in-out;
+        -moz-animation: fadeinleft 700ms forwards ease-in-out;
+        -webkit-animation: fadeinleft 700ms forwards ease-in-out;
+        animation-delay: 1.5s;
+        -o-animation-delay: 1.5s;
+        -moz-animation-delay: 1.5s;
+        -webkit-animation-delay: 1.5s;
+    }
+    
+    .tab-button:nth-child(2) {
+        margin-right: 2vw;
+        animation: fadeinleft 700ms forwards ease-in-out;
+        -o-animation: fadeinleft 700ms forwards ease-in-out;
+        -moz-animation: fadeinleft 700ms forwards ease-in-out;
+        -webkit-animation: fadeinleft 700ms forwards ease-in-out;
+        animation-delay: 1.6s;
+        -o-animation-delay: 1.6s;
+        -moz-animation-delay: 1.6s;
+        -webkit-animation-delay: 1.6s;
+    }
+    
+    .tab-button:nth-child(3) {
+        margin-right: 2vw;
+        animation: fadeinleft 700ms forwards ease-in-out;
+        -o-animation: fadeinleft 700ms forwards ease-in-out;
+        -moz-animation: fadeinleft 700ms forwards ease-in-out;
+        -webkit-animation: fadeinleft 700ms forwards ease-in-out;
+        animation-delay: 1.7s;
+        -o-animation-delay: 1.7s;
+        -moz-animation-delay: 1.7s;
+        -webkit-animation-delay: 1.7s;
+    }
+    
+    .tab-button:nth-child(4) {
+        animation: fadeinleft 700ms forwards ease-in-out;
+        -o-animation: fadeinleft 700ms forwards ease-in-out;
+        -moz-animation: fadeinleft 700ms forwards ease-in-out;
+        -webkit-animation: fadeinleft 700ms forwards ease-in-out;
+        animation-delay: 1.8s;
+        -o-animation-delay: 1.8s;
+        -moz-animation-delay: 1.8s;
+        -webkit-animation-delay: 1.8s;
+    }
 }
 
 .fadeInUp {
@@ -182,13 +307,13 @@ body {
 }
 
 @keyframes fadeInLeft {
-    0%{transform: translateX(-100px)}
-    40%{opacity: 0}
+    0%{transform: translateX(-50px)}
+    40%{opacity: 0;}
     100%{opacity: 1}
 }
 
 @keyframes fadeInRight {
-    0%{transform: translateX(100px)}
+    0%{transform: translateX(50px)}
     40%{opacity: 0}
     100%{opacity: 1}
 }

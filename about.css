@@ -4,12 +4,12 @@ body {
     width: 100%;
 
 
-    background-image: linear-gradient(black, rgba(6, 44, 80, 1) 20%);
+    background-image: linear-gradient(black, rgba(6, 44, 80, 1) 40%);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-@media (orientation: portrait) {
+@media (max-width: 999px) {
     #upper-container {
         display: flex;
         flex-direction: row;
@@ -25,7 +25,7 @@ body {
         display: flex;
         height: 40%;
         align-self: center;
-        margin-right: 5vw;
+        margin-right: 2vw;
         padding: 2vw;
     
         background-image: linear-gradient(rgba(6, 44, 80, 1), black);
@@ -78,7 +78,7 @@ body {
     }
 }
 
-@media (orientation: landscape) {
+@media (min-width: 1000px) {
     #upper-container {
         display: flex;
         flex-direction: column;
@@ -141,6 +141,49 @@ body {
     #resume {
         margin-left: 20px;
         width: 400px;
+    }
+
+    .tab-button:nth-child(1) {
+        margin-right: 2vw;
+        animation: fadeinleft 0.5s forwards ease-in-out;
+        -o-animation: fadeinleft 0.5s forwards ease-in-out;
+        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
+        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+    }
+    
+    .tab-button:nth-child(2) {
+        margin-right: 2vw;
+        animation: fadeinleft 0.5s forwards ease-in-out;
+        -o-animation: fadeinleft 0.5s forwards ease-in-out;
+        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
+        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation-delay: 100ms;
+        -o-animation-delay: 100ms;
+        -moz-animation-delay: 100ms;
+        -webkit-animation-delay: 100ms;
+    }
+    
+    .tab-button:nth-child(3) {
+        margin-right: 2vw;
+        animation: fadeinleft 0.5s forwards ease-in-out;
+        -o-animation: fadeinleft 0.5s forwards ease-in-out;
+        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
+        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation-delay: 200ms;
+        -o-animation-delay: 200ms;
+        -moz-animation-delay: 200ms;
+        -webkit-animation-delay: 200ms;
+    }
+    
+    .tab-button:nth-child(4) {
+        animation: fadeinleft 0.5s forwards ease-in-out;
+        -o-animation: fadeinleft 0.5s forwards ease-in-out;
+        -moz-animation: fadeinleft 0.5s forwards ease-in-out;
+        -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
+        animation-delay: 300ms;
+        -o-animation-delay: 300ms;
+        -moz-animation-delay: 300ms;
+        -webkit-animation-delay: 300ms;
     }
 }
 
@@ -313,49 +356,6 @@ body {
     -o-animation-delay: 700ms;
     -moz-animation-delay: 700ms;
     -webkit-animation-delay: 700ms;
-}
-
-.tab-button:nth-child(1) {
-    margin-right: 2vw;
-    animation: fadeinleft 0.5s forwards ease-in-out;
-    -o-animation: fadeinleft 0.5s forwards ease-in-out;
-    -moz-animation: fadeinleft 0.5s forwards ease-in-out;
-    -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
-}
-
-.tab-button:nth-child(2) {
-    margin-right: 2vw;
-    animation: fadeinleft 0.5s forwards ease-in-out;
-    -o-animation: fadeinleft 0.5s forwards ease-in-out;
-    -moz-animation: fadeinleft 0.5s forwards ease-in-out;
-    -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
-    animation-delay: 100ms;
-    -o-animation-delay: 100ms;
-    -moz-animation-delay: 100ms;
-    -webkit-animation-delay: 100ms;
-}
-
-.tab-button:nth-child(3) {
-    margin-right: 2vw;
-    animation: fadeinleft 0.5s forwards ease-in-out;
-    -o-animation: fadeinleft 0.5s forwards ease-in-out;
-    -moz-animation: fadeinleft 0.5s forwards ease-in-out;
-    -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
-    animation-delay: 200ms;
-    -o-animation-delay: 200ms;
-    -moz-animation-delay: 200ms;
-    -webkit-animation-delay: 200ms;
-}
-
-.tab-button:nth-child(4) {
-    animation: fadeinleft 0.5s forwards ease-in-out;
-    -o-animation: fadeinleft 0.5s forwards ease-in-out;
-    -moz-animation: fadeinleft 0.5s forwards ease-in-out;
-    -webkit-animation: fadeinleft 0.5s forwards ease-in-out;
-    animation-delay: 300ms;
-    -o-animation-delay: 300ms;
-    -moz-animation-delay: 300ms;
-    -webkit-animation-delay: 300ms;
 }
 
 @keyframes fadeinfromleft {
